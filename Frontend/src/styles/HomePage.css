@@ -1,0 +1,211 @@
+.home-page {
+  background: linear-gradient(to bottom, #eaf6ff, #ffffff);
+  color: #002b5b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-page h1 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color: #0077ff;
+  text-shadow: 0px 4px 10px rgba(0, 119, 255, 0.3);
+  margin-bottom: 20px;
+  animation: fadeInDown 1.5s ease-in-out;
+  text-align: center;
+  margin-top: 120px;
+}
+
+.home-page h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: oklch(0.488 0.243 264.376);
+  text-align: center;
+}
+
+.home-page h4 {
+  font-size: 20px;
+  color: #0077ff;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-page .typewriter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.home-page .typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.home-page .cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: #007bff;
+  animation: blink 0.8s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+.home-page .flight-suggestions {
+  margin-top: 80px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-page .flight_card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-page .flight_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 16px rgba(0, 119, 255, 0.2);
+}
+
+.home-page .flight_card h3 {
+  color: #0077ff;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.home-page .flight_card p {
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.home-page .login-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 119, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.home-page .login-btn:hover {
+  background-color: #005fcc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 119, 255, 0.4);
+}
+.airline-stats {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  padding: 25px;          /* reduced size */
+  background:linear-gradient(to bottom, #eaf6ff, #ffffff);
+  border-radius: 26px;
+  width: 85%;             /* reduced width */
+  margin: 150px auto 0;    /* moved down + centered */
+  box-sizing: border-box;
+}
+
+/* BIG LEFT CARD */
+.airline-stats .stat-card:first-child {
+  grid-row: span 2;
+  background: linear-gradient(
+  to bottom,
+  oklch(0.35 0.243 264.376),   /* darker */
+  oklch(0.488 0.243 264.376)   /* your original */
+  );
+
+  border-radius: 26px;
+  padding: 45px 40px;     /* reduced padding */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+}
+
+/* White cards */
+.airline-stats .stat-card {
+  background: #ffffff;
+  border: 2px solid #d6e4ff;
+  border-radius: 26px;
+  padding: 28px 30px;
+  color: #001b7a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Headings */
+.stat-card h2 {
+  font-size: 40px;        /* reduced from 48px */
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+/* Subtext */
+.stat-card p {
+  font-size: 24px;        /* reduced */
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Fix text color */
+.airline-stats .stat-card:not(:first-child) h2,
+.airline-stats .stat-card:not(:first-child) p {
+  color: #001b7a;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .airline-stats {
+    grid-template-columns: 1fr;
+    width: 100%;
+    transform: scale(1);
+  }
+
+  .airline-stats .stat-card:first-child {
+    grid-row: span 1;
+  }
+}
+
+
+

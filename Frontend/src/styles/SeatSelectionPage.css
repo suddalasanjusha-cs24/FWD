@@ -1,0 +1,281 @@
+/* === General Layout === */
+.seat-page {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #eaf4ff, #ffffff);
+  color: #003366;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+}
+
+/* === Header / Top Bar === */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(0, 119, 255, 0.2);
+  padding: 8px 25px;
+  color: #0077ff;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #0077ff;
+  letter-spacing: 1px;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icons a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #004c99;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-icons a:hover {
+  color: #0077ff;
+}
+
+.logout-link {
+  color: #c70000;
+  font-weight: 600;
+}
+
+/* === Flight Details === */
+.flight-info {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0, 119, 255, 0.1);
+  padding: 15px 25px;
+  width: 80%;
+  max-width: 750px;
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid rgba(0, 119, 255, 0.3);
+  backdrop-filter: blur(12px);
+  color: #004c99;
+}
+
+.flight-info h2 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #003e8a;
+}
+
+.flight-info p {
+  font-size: 0.95rem;
+  color: #004c99;
+}
+
+/* === Main Layout === */
+.main-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  padding: 20px 40px;
+  gap: 40px;
+}
+
+/* === Passenger Box === */
+.passenger-box {
+  width: 25%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid rgba(0, 119, 255, 0.25);
+  color: #004c99;
+}
+
+.passenger-box h3 {
+  font-size: 1.2rem;
+  color: #0077ff;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(0, 119, 255, 0.2);
+  padding-bottom: 5px;
+}
+
+/* === Seat Layout === */
+.seat-layout {
+  width: 65%;
+  text-align: center;
+}
+
+.cockpit {
+  background: rgba(0, 119, 255, 0.15);
+  border: 2px solid #0077ff;
+  border-radius: 10px;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: #004c99;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* === Exit & Washroom Layout === */
+.exit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.exit-text {
+  font-weight: bold;
+  color: #c70000;
+  font-size: 0.95rem;
+}
+
+.washroom {
+  background: rgba(0, 119, 255, 0.1);
+  border: 1.5px solid #0077ff;
+  border-radius: 6px;
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #004c99;
+  font-size: 1.3rem;
+}
+
+/* === Seat Box (Scrollable) === */
+.seats-box {
+  max-height: 400px;
+  overflow-y: scroll;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 119, 255, 0.3);
+  margin-top: 10px;
+  box-shadow: 0 2px 10px rgba(0, 119, 255, 0.1);
+}
+
+/* Scrollbar Customization */
+.seats-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.seats-box::-webkit-scrollbar-thumb {
+  background: rgba(0, 119, 255, 0.3);
+  border-radius: 10px;
+}
+
+/* === Seat Rows === */
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin: 6px 0;
+}
+
+.seat {
+  width: 35px;
+  height: 35px;
+  margin: 4px;
+  border-radius: 8px;
+  border: 2px solid #0077ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: white;
+  color: #004c99;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.seat:hover {
+  background: #0077ff;
+  color: white;
+}
+
+.selected {
+  background: #004c99;
+  color: white;
+  border-color: #003366;
+}
+
+/* Aisle gap */
+.aisle {
+  width: 50px;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .passenger-box {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .seat-layout {
+    width: 90%;
+  }
+
+  .nav-icons a {
+    font-size: 0.85rem;
+  }
+}
+
+.seat-page__actions {
+  position:fixed ;
+  bottom: 4px;  /* ↓ moved further down */
+  right: 30px;
+  z-index: 100;
+  
+}
+
+.seat-page__continue-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 9px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.seat-page__continue-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.seat-page {
+  padding-top: 80px; /* prevents overlap with navbar */
+}
+.seat-page .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  margin: 0;
+}
+
+

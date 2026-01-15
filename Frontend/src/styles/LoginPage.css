@@ -1,0 +1,122 @@
+.login-page {
+  background-color: #EFEEF4;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(16px);
+  font-family: "Poppins", sans-serif;
+}
+
+.login-page .login_container {
+  color: #2d3f2f;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 303.44px;
+  margin: 100px auto 20px auto;
+  height: auto;
+  background-color: whitesmoke;
+}
+
+.login-page .name {
+  text-align: center;
+  font-size: 25px;
+}
+
+.login-page .login.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translate(-50%);
+  color: #aaa;
+}
+
+.login-page .login.login_field {
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-page .detail {
+  text-align: center;
+  font-size: 18px;
+}
+
+.login-page .Heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.login-page .Heading h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.login-page .Heading.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+  transition: background 0.3s ease;
+}
+
+.login-page .login {
+  margin: 15px;
+}
+
+.login-page input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2d3f2f;
+  border-radius: 4px;
+}
+
+.login-page .login_btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #97bdeb;
+  border: none;
+  color: #1d2428;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-page .login_btn:hover {
+  background-color: #71a0c5;
+}
+
+.login-page .sign_up {
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(20, 122, 205);
+}
+
+.login-page .sign_up a:hover {
+  text-decoration: underline;
+}
+
+.login-page .login_image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #cce4fb;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin: 0 auto 20px;
+  display: block;
+  background-color: #fff;
+}

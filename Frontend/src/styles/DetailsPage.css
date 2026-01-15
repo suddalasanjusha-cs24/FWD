@@ -1,0 +1,167 @@
+/* 🌐 Base & Reset Styles */
+.container-page * {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-page body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #eaf6ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* 🧭 Main Container Layout */
+.container-page .container {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+/* 📝 Left Form Section */
+.container-page .form-section {
+  flex: 2;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.container-page .form-section:hover {
+  transform: translateY(-3px);
+}
+
+.container-page .form-section h2 {
+  color: #003366;
+  border-bottom: 2px solid #0078d7;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+/* 🔖 Labels & Inputs */
+.container-page label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.container-page input[type="text"],
+.container-page input[type="email"],
+.container-page input[type="tel"],
+.container-page input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccd7e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-page input:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 6px rgba(0, 120, 215, 0.3);
+  outline: none;
+}
+
+/* 🚻 Gender Section */
+.container-page .gender {
+  margin-top: 20px;
+}
+
+.container-page .gender label {
+  font-weight: 500;
+  margin-right: 20px;
+  color: #444;
+}
+
+.container-page .gender input {
+  margin-right: 8px;
+  accent-color: #0078d7;
+  transform: scale(0.9);
+}
+
+/* 🚀 Submit Button */
+.container-page .submit-btn {
+  margin-top: 30px;
+  background: linear-gradient(90deg, #0078d7, #005fa3);
+  color: #fff;
+  padding: 12px 22px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.container-page .submit-btn:hover {
+  background: linear-gradient(90deg, #005fa3, #004a80);
+  transform: translateY(-2px);
+}
+
+/* ✈️ Right Summary Section */
+.container-page .summary-section {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  height: fit-content;
+}
+
+.container-page .summary-section h3 {
+  color: #003366;
+  border-bottom: 2px solid #0078d7;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+/* 🧾 Flight Summary Box */
+.container-page .flight-summary {
+  background: #eaf3ff;
+  border-left: 4px solid #0078d7;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container-page .flight-summary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 120, 215, 0.15);
+}
+
+.container-page .flight-summary p {
+  margin: 6px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.container-page .price {
+  font-size: 1.2rem;
+  color: #0078d7;
+  font-weight: 700;
+  text-align: right;
+  margin-top: 10px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 900px) {
+  .container-page .container {
+    flex-direction: column;
+  }
+  .container-page .summary-section {
+    order: -1;
+  }
+}

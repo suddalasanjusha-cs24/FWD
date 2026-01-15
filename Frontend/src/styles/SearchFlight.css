@@ -1,0 +1,201 @@
+/* Scope to seat_flight only */
+.seat_flight {
+  font-family: "Poppins", sans-serif;
+  color: #1a2b4c;
+  background: linear-gradient(to bottom, #eaf6ff, #ffffff);
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* --- HEADER --- */
+.seat_flight .sf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 12px 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 70, 130, 0.15);
+}
+
+.seat_flight .sf-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0066cc;
+}
+
+.seat_flight .sf-home-btn {
+  background: #0066cc;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.seat_flight .sf-home-btn:hover {
+  background: #004d99;
+}
+
+/* --- MAIN --- */
+.seat_flight .sf-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.seat_flight .sf-booking-form {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 30px;
+  width: 80%;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 90, 180, 0.1);
+  overflow: visible; /* 🔥 REQUIRED FOR AUTOCOMPLETE */
+}
+
+.seat_flight .sf-booking-form h4 {
+  text-align: center;
+  color: #336699;
+  margin-bottom: 20px;
+}
+
+.seat_flight .sf-flight-box h6 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #003366;
+}
+
+/* --- Trip Type --- */
+.seat_flight .sf-trip-type {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.seat_flight .sf-trip-type label {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #003366;
+}
+
+.seat_flight .sf-trip-type input[type="radio"] {
+  transform: scale(0.8);
+  accent-color: #0099ff;
+}
+
+.seat_flight .sf-currency {
+  margin-left: auto;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
+  background: #eaf3ff;
+  color: #003366;
+}
+
+/* --- Form Fields --- */
+.seat_flight .sf-locations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.seat_flight .sf-field {
+  display: flex;
+  flex-direction: column;
+  position: relative; /* 🔥 REQUIRED FOR DROPDOWN POSITION */
+}
+
+.seat_flight label {
+  font-size: 0.85rem;
+  color: #003366;
+  margin-bottom: 4px;
+}
+
+.seat_flight input,
+.seat_flight select {
+  border: 1px solid #bcd8f7;
+  padding: 10px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #003366;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(0, 90, 180, 0.05);
+}
+
+.seat_flight input:focus,
+.seat_flight select:focus {
+  outline: 2px solid #0099ff;
+}
+
+/* --- AUTOCOMPLETE CITY DROPDOWN --- */
+.autocomplete {
+  position: relative;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #bcd8f7;
+  border-top: none;
+  max-height: 160px;
+  overflow-y: auto;
+  z-index: 9999; /* 🔥 ENSURES VISIBILITY */
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 6px 16px rgba(0, 90, 180, 0.15);
+}
+
+.autocomplete-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.autocomplete-list li:hover {
+  background-color: #f0f6ff;
+}
+
+/* --- Button --- */
+.seat_flight .sf-search-btn {
+  display: block;
+  margin: 0 auto;
+  background: #0099ff;
+  border: none;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 3px 10px rgba(0, 153, 255, 0.3);
+}
+
+.seat_flight .sf-search-btn:hover {
+  background: #007acc;
+  box-shadow: 0 4px 14px rgba(0, 122, 204, 0.4);
+}
+
+/* --- Footer --- */
+.seat_flight .sf-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: #446688;
+}
